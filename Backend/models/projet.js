@@ -6,10 +6,10 @@ const projetSchema=mongoose.Schema({
     Expected_Impact:{ type: String, required: true ,unique:true},
     Typeofaction:{type: String, required: true,unique:true},
     url:{type: String, required: true,unique:true},
-    motcle:{type: String, required: true,unique:true},
+    motcle:{type: Array, required: true,unique:true},
     date_début:{type: String, required: true,unique:true},
     date_fin:{type: String, required: true,unique:true},
-
+//liste des chercheurs
 
 })
 const projet = mongoose.model('projet',projetSchema);

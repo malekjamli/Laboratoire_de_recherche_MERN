@@ -4,15 +4,18 @@ import unitéderecherche from "./unitéderecherche.js";
 import user from "./user.js";
 
 const categorieSchema=mongoose.Schema({
-    sexe:{ type: String, required: true },
-    grade:{type: String, required: true },
-    last_diplome:{type: String, required: true , unique:true},
-    universite:{ type: String, required: true },
-    etablissement:{ type: String, required: true },
-    motclé:{ type: String, required: true },
-    birthday_place:{ type: String, required: false },
-    Fonctionnalités:{ type: String, required: true },
-    utlisateurRef: {type:mongoose.Schema.Types.ObjectId, ref:user},
+    Nom_Prenom:{ type: String, required: true },
+    email:{ type: String},
+    password:{ type: String},
+    sexe:{ type: String},
+    grade:{type: String},
+    last_diplome:{type: String},
+    universite:{ type: String},
+    etablissement:{ type: String},
+    motclé:{ type: String},
+    birthday_place:{ type: String},
+    Fonctionnalités:{ type: String},
+    //utlisateurRef: {type:mongoose.Schema.Types.ObjectId, ref:user},
     projetRef: {type:mongoose.Schema.Types.ObjectId, ref:projet},
     uniteRef: {type:mongoose.Schema.Types.ObjectId, ref:unitéderecherche}
 

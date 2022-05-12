@@ -61,8 +61,8 @@ export const consulterprojet = async (req, res) => {
 }
 }
 export const ajouterchercheur = async (req, res) => {
-    const { sexe, grade,last_diplome,universite,etablissement,motclé,birthday_place,Fonctionnalités,utlisateurRef,projetRef} = req.body;
-    const newchercheur = new chercheur({ sexe:sexe, grade:grade,last_diplome:last_diplome,universite:universite,etablissement:etablissement,motclé:motclé,birthday_place:birthday_place,Fonctionnalités:Fonctionnalités,utlisateurRef:utlisateurRef, projetRef:projetRef})
+    const {Nom_Prenom ,email,password, sexe, grade,last_diplome,universite,etablissement,motclé,birthday_place,Fonctionnalités,utlisateurRef,projetRef} = req.body;
+    const newchercheur = new chercheur({ Nom_Prenom:Nom_Prenom,email:email,password:password,sexe:sexe, grade:grade,last_diplome:last_diplome,universite:universite,etablissement:etablissement,motclé:motclé,birthday_place:birthday_place,Fonctionnalités:Fonctionnalités,utlisateurRef:utlisateurRef, projetRef:projetRef})
     try {await newchercheur.save();
         res.status(201).json(newchercheur );
 }
